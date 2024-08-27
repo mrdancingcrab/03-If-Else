@@ -1,13 +1,35 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Total amount:");
-double.TryParse(Console.ReadLine(), out double amount);
+Console.WriteLine("Input a number between 1-7:");
+double.TryParse(Console.ReadLine(), out double num1);
 
-
-if (amount > 1000 )
+if (num1 == 1)
 {
-    amount = amount * 0.9;
-    Console.WriteLine("Your price is: " + amount);    
+    Console.WriteLine("Monday");
+}
+else if (num1 == 2)
+{
+    Console.WriteLine("Tuesday");
+}
+else if (num1 == 3)
+{
+    Console.WriteLine("Wednesday");
+}
+else if (num1 == 4)
+{
+    Console.WriteLine("Thursday");
+}
+else if (num1 == 5)
+{
+    Console.WriteLine("Friday");
+}
+else if (num1 == 6)
+{
+    Console.WriteLine("Saturday");
+}
+else if (num1 == 7)
+{
+    Console.WriteLine("Sunday");
 }
 else
-    Console.WriteLine("Your price is: " + amount);
+    Console.WriteLine("ERROR");
