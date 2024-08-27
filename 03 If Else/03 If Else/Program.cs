@@ -1,15 +1,24 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Ange din ålder:");
-int.TryParse(Console.ReadLine(), out int age);
+Console.WriteLine("Fill in your score between 0-100:");
+int.TryParse(Console.ReadLine(), out int score);
 
-if (age < 13)
+if (score >= 90)
 {
-    Console.WriteLine("You are a child");
+    Console.WriteLine("A");
 }
-else if (age > 12 && age < 20)
+else if (score < 90 && score >= 80)
 {
-    Console.WriteLine("You are a teenager.");
+    Console.WriteLine("B");
 }
-else 
-    Console.WriteLine("You are an adult.");
+else if (score < 80 && score >= 70)
+{
+    Console.WriteLine("C");
+}
+else if (score < 70 && score >= 60)
+{
+    Console.WriteLine("D");
+}
+else
+    Console.WriteLine("F");
+   
 
