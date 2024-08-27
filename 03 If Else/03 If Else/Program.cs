@@ -1,24 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Choose 3 numbers:");
+Console.WriteLine("Choose one number:");
 int.TryParse(Console.ReadLine(), out int num1);
-int.TryParse(Console.ReadLine(), out int num2);
-int.TryParse(Console.ReadLine(), out int num3);
 
-if (num1 > num2 && num1 > num3)
+
+if (num1 > 0)
 {
-    Console.WriteLine(num1);
+    Console.WriteLine("Your number is positive");
 }
-else if (num2 > num1 && num2 > num3)
+
+else if (num1 < 0)
 {
-    Console.WriteLine(num2);
-}
-else if (num3 > num2 && num3 > num1)
-{
-    Console.WriteLine(num3);
+    Console.WriteLine("Your number is negative!");
 }
 else
-    Console.WriteLine("No winner here");
+    Console.WriteLine("Your number is zero");
 
 
 
