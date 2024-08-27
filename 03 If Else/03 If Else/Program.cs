@@ -1,12 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Ange en siffra:");
-int.TryParse(Console.ReadLine(), out int siffra);
+Console.WriteLine("Ange din ålder:");
+int.TryParse(Console.ReadLine(), out int age);
 
-if (siffra % 2 == 0)
+if (age < 13)
 {
-    Console.WriteLine("Din siffra är jämn");
+    Console.WriteLine("You are a child");
 }
-else
-    Console.WriteLine("Din siffra är ojämn");
-
+else if (age > 12 && age < 20)
+{
+    Console.WriteLine("You are a teenager.");
+}
+else 
+    Console.WriteLine("You are an adult.");
 
