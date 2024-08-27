@@ -1,20 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Choose one number:");
-int.TryParse(Console.ReadLine(), out int num1);
+Console.WriteLine("Total amount:");
+double.TryParse(Console.ReadLine(), out double amount);
 
 
-if (num1 > 0)
+if (amount > 1000 )
 {
-    Console.WriteLine("Your number is positive");
-}
-
-else if (num1 < 0)
-{
-    Console.WriteLine("Your number is negative!");
+    amount = amount * 0.9;
+    Console.WriteLine("Your price is: " + amount);    
 }
 else
-    Console.WriteLine("Your number is zero");
-
-
-
+    Console.WriteLine("Your price is: " + amount);
