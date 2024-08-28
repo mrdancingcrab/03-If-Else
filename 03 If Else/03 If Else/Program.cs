@@ -1,5 +1,6 @@
 ﻿
 using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 Console.WriteLine("Welcome to the playground!"); // En välkomsthälsning i menyn till användaren
 bool myBool = true; // Här initieras en bool till våran loop
@@ -25,17 +26,19 @@ while (myBool) // Här startar loopen
         case 1: 
             Console.Clear(); // Rensar allting i konsolen
             Console.WriteLine("Give me a number:"); // Här ber vi användaren om ett nummer.
-            int.TryParse(Console.ReadLine(), out int siffra); // Användarens input.
+            double.TryParse(Console.ReadLine(), out double siffra); // Användarens input.
 
-            if (siffra % 2 == 0) // En if-sats som räknar ut "resten" om vi delar på 2, är rest = 0 innebär detta att talet är jämnt.
+            if (siffra % 2 == 0 && siffra % 1 == 0) // En if-sats som räknar ut "resten" om vi delar på 2, är rest = 0 innebär detta att talet är jämnt.
             {
                 Console.WriteLine("Your number is even"); // Detta printas om numret är jämnt.
                 Console.ReadLine(); // Används för att inte återgå till menyloopen utan att användaren klicker på ENTER.
             }
             else
+            {
                 Console.WriteLine("Your number is odd"); // Detta printas om numret är ojämnt.
-                Console.ReadLine();   // Används för att inte återgå till menyloopen utan att användaren klicker på ENTER.      
-            break;
+                Console.ReadLine();   // Används för att inte återgå till menyloopen utan att användaren klicker på ENTER.  
+            }    
+                break;
 
         case 2:
             Console.Clear();
@@ -53,9 +56,11 @@ while (myBool) // Här startar loopen
                 Console.ReadLine();
             }
             else
+            {
                 Console.WriteLine("You are an adult."); // Om användaren är över 19.
                 Console.ReadLine();
-            break;
+            }
+                break;
 
         case 3:
             Console.Clear();
@@ -88,9 +93,11 @@ while (myBool) // Här startar loopen
                 Console.ReadLine();
             }
             else
+            {
                 Console.Clear();
                 Console.WriteLine("F"); // Om poängen är under 60.
                 Console.ReadLine();
+            }
                 break;
 
         case 4:
@@ -104,8 +111,10 @@ while (myBool) // Här startar loopen
                 Console.ReadLine();
             }
             else
+            {
                 Console.WriteLine("This is NOT a leap year");
                 Console.ReadLine();
+            }
                 break;
 
         case 5:
@@ -132,8 +141,10 @@ while (myBool) // Här startar loopen
                 Console.ReadLine();
             }
             else
+            {
                 Console.WriteLine("No winner here"); // Om vi har flera lika stora tal i toppen printas detta ut.
                 Console.ReadLine();
+            }
                 break;
 
         case 6:
@@ -154,8 +165,10 @@ while (myBool) // Här startar loopen
                 Console.ReadLine();
             }
             else // Om numret är lika med 0.
+            {
                 Console.WriteLine("Your number is zero");
                 Console.ReadLine();
+            }
                 break;
 
         case 7:
@@ -171,8 +184,10 @@ while (myBool) // Här startar loopen
                 Console.ReadLine();
             }
             else // Om totalsumman inte överstiger 1000kr printar vi ut det normala priset.
+            {
                 Console.WriteLine("Your price is: " + amount);
                 Console.ReadLine();
+            }
                 break;
 
         case 8:
@@ -217,8 +232,10 @@ while (myBool) // Här startar loopen
                 Console.ReadLine();
             }
             else // Detta är ifall användaren skulle skriva en siffra utanför spannet 1-7.
+            {
                 Console.WriteLine("ERROR");
                 Console.ReadLine();
+            }
                 break;
 
         case 9:
@@ -233,9 +250,11 @@ while (myBool) // Här startar loopen
                 Console.WriteLine("Access granted"); // Access granted printas ut. 
                 Console.ReadLine();
             }
-            else // Om användarens input inte matcher vårat lösenord. 
+            else // Om användarens input inte matcher vårat lösenord.
+            {
                 Console.WriteLine("Access denied"); // Access denied printas ut. 
                 Console.ReadLine();
+            } 
                 break;
 
         case 10:
@@ -285,7 +304,7 @@ while (myBool) // Här startar loopen
 
                 }
             }
-                break;
+                        break;
 
         case 11:
             myBool = false;  // Här avslutar vi programmet.
